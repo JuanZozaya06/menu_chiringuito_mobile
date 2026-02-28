@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration=production --base-href \"/menu_chiringuito/\" && npx angular-cli-ghpages --dir=dist/menu_chiringuito/browser"
+    "deploy": "ng build --configuration=production --base-href \"/menu_chiringuito_mobile/\" && npx angular-cli-ghpages --dir=dist/menu_chiringuito_mobile/browser"
   },
   "private": true,
   "dependencies": {
