@@ -1,0 +1,80 @@
+<div class="menu-page">
+  <!-- PORTADA 100vh con carousel de fondo -->
+  <header class="hero">
+    <div class="hero-slider">
+      <img
+        *ngFor="let img of images; let i = index"
+        class="hero-slide"
+        [class.active]="i === currentIndex"
+        [class.prev]="i === prevIndex"
+        [src]="img.url"
+        [alt]="img.name"
+        draggable="false"
+      />
+    </div>
+
+    <!-- overlay para legibilidad -->
+    <div class="hero-overlay"></div>
+
+    <!-- contenido (logo/titulo) -->
+    <div class="hero-content">
+      <img src="logo.png" class="hero-logo" alt="El Chiringuito del Sabor" />
+      <div class="hero-title">EL CHIRINGUITO</div>
+      <div class="hero-subtitle">DEL SABOR</div>
+
+      <div class="hero-scrollhint">Desliza ↓</div>
+    </div>
+
+    <!-- caption opcional estilo antes -->
+    <div class="hero-captions">
+      <div
+        class="hero-caption"
+        *ngFor="let img of images; let i = index"
+        [class.active]="i === currentIndex"
+        [class.prev]="i === prevIndex"
+      >
+        {{ img.name }}
+      </div>
+    </div>
+
+    
+  </header>
+
+  <!-- MENÚ (scroll normal) -->
+  <main class="menu-content">
+    <section class="menu-section" *ngFor="let section of sections">
+      <div class="menu-card">
+        <h2 class="title">{{ section.name }}</h2>
+
+        <div class="items">
+          <div class="item" *ngFor="let item of section.items">
+            <img src="top.png" class="top" *ngIf="item.top" alt="TOP" />
+
+            <div class="row-left">
+              <div class="row-name">
+                {{ item.name }}
+                <span class="disclaimer" *ngIf="item.disclaimer">
+                  {{ item.disclaimer }}
+                </span>
+              </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="row-price">{{ item.price }} €</div>
+          </div>
+        </div>
+
+        <div class="extras" *ngIf="section.extras?.length">
+          <div class="extra" *ngFor="let extra of section.extras">
+            {{ extra }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="menu-footer">
+      <div class="footer-chip">Gracias por visitarnos 🌴</div>
+    </footer>
+  </main>
+</div>
