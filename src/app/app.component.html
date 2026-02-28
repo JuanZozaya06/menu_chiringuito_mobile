@@ -43,8 +43,8 @@
   <!-- MENÚ (scroll normal) -->
   <main class="menu-content">
     <section class="menu-section" *ngFor="let section of sections">
+      <h2 class="title">{{ section.name }}</h2>
       <div class="menu-card">
-        <h2 class="title">{{ section.name }}</h2>
 
         <div class="items">
           <div class="item" *ngFor="let item of section.items">
