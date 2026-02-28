@@ -12,7 +12,7 @@
 /* Página vertical */
 .menu-page {
   min-height: 100vh;
-  background: #0ecfd3; /* fallback por si no carga imagen */
+  background: black; /* fallback por si no carga imagen */
   display: flex;
   flex-direction: column;
 }
@@ -180,11 +180,18 @@
   font-size: 12px;
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 8px 10px;
   border-radius: 999px;
   backdrop-filter: blur(6px);
   margin-top: 40px;
   margin-top: 16px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  line-height: 12px;
+  font-size: 14px;
+  .slidenow {
+    height: 8px;
+  }
 }
 
 /* =========================
@@ -245,7 +252,7 @@
   padding: 16px;
   background: #23272d;
   position: relative;
-  box-shadow: 0 0 40px 1px rgba(1, 1, 1, 0.35);
+  /* box-shadow: 0 0 40px 1px rgba(1, 1, 1, 0.35); */
 }
 .title {
   font-size: 28px;
@@ -265,6 +272,13 @@
   display: flex;
   align-items: center;
   padding-left: 24px;
+  margin-bottom: -1px;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 12px;
 }
 
 /* Items */
