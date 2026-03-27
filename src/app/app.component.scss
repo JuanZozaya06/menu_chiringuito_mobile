@@ -12,7 +12,7 @@
 /* Página vertical */
 .menu-page {
   min-height: 100vh;
-  background: #0ecfd3; /* fallback por si no carga imagen */
+  background: black; /* fallback por si no carga imagen */
   display: flex;
   flex-direction: column;
 }
