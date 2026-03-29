@@ -22,7 +22,10 @@
       <div class="hero-title">EL CHIRINGUITO</div>
       <div class="hero-subtitle">DEL SABOR</div>
 
-      <div class="hero-scrollhint">Desliza ↓</div>
+      <div class="hero-scrollhint">
+        <div class="slidenow">Desliza</div>
+        <div class="arrow">↓</div>
+      </div>
     </div>
 
     <!-- caption opcional estilo antes -->
@@ -36,8 +39,6 @@
         {{ img.name }}
       </div>
     </div>
-
-    
   </header>
 
   <!-- MENÚ (scroll normal) -->
@@ -45,7 +46,6 @@
     <section class="menu-section" *ngFor="let section of sections">
       <h2 class="title">{{ section.name }}</h2>
       <div class="menu-card">
-
         <div class="items">
           <div class="item" *ngFor="let item of section.items">
             <img src="top.png" class="top" *ngIf="item.top" alt="TOP" />

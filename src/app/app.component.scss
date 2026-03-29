@@ -99,15 +99,15 @@
   height: 80px;
   width: auto;
   margin-bottom: 18px;
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55));
+  /* filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55)); */
 }
 
 .hero-title {
   font-size: 42px;
   text-transform: uppercase;
   color: #fff;
-  -webkit-text-stroke: 8px #0000006e;
-  paint-order: stroke fill;
+  /* -webkit-text-stroke: 8px #0000006e;
+  paint-order: stroke fill; */
   letter-spacing: 1px;
   line-height: 1;
 }
@@ -117,8 +117,8 @@
   font-size: 34px;
   text-transform: uppercase;
   color: #fff;
-  -webkit-text-stroke: 8px #0000006e;
-  paint-order: stroke fill;
+  /* -webkit-text-stroke: 8px #0000006e;
+  paint-order: stroke fill; */
   letter-spacing: 0.8px;
   line-height: 1;
 }
@@ -150,7 +150,7 @@
   inset: 0 auto auto 0;
   color: white;
   text-transform: uppercase;
-  -webkit-text-stroke: 3px #0000006e;
+  -webkit-text-stroke: 2px #0000006e;
   paint-order: stroke fill;
   font-size: 18px;
   width: 100%;
@@ -180,11 +180,18 @@
   font-size: 12px;
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 8px 10px;
   border-radius: 999px;
   backdrop-filter: blur(6px);
   margin-top: 40px;
   margin-top: 16px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  line-height: 12px;
+  font-size: 14px;
+  .slidenow {
+    height: 8px;
+  }
 }
 
 /* =========================
@@ -245,13 +252,13 @@
   padding: 16px;
   background: #23272d;
   position: relative;
-  box-shadow: 0 0 40px 1px rgba(1, 1, 1, 0.35);
+  /* box-shadow: 0 0 40px 1px rgba(1, 1, 1, 0.35); */
 }
 .title {
   font-size: 28px;
   text-transform: uppercase;
   color: white;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 2px black;
   paint-order: stroke fill;
 
   background: #dfbf99;
@@ -265,6 +272,13 @@
   display: flex;
   align-items: center;
   padding-left: 24px;
+  margin-bottom: -3px;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 13px;
+  line-height: 12px;
 }
 
 /* Items */
