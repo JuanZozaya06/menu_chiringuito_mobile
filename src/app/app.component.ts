@@ -5,6 +5,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Subscription, interval, of } from 'rxjs';
 import { catchError, startWith, switchMap, tap } from 'rxjs/operators';
 import { HttpClientJsonpModule } from '@angular/common/http';
+import { AnalyticsService } from './analytics.service';
 
 type Side = 'LEFT' | 'RIGHT';
 
@@ -85,9 +86,14 @@ export class AppComponent implements OnInit, OnDestroy {
   // =========================
   private refreshSub?: Subscription;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private analytics: AnalyticsService
+  ) {}
 
   ngOnInit(): void {
+    void this.analytics.init();
+
     // 1) cache primero
     const cached = this.loadCache();
     if (cached) this.applyConfig(cached);
